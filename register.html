@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Registration Form</title>
+    <style>
+        /* General form styles */
+        form {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+
+        label {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            font-size: 14px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="number"]:focus {
+            border-color: #0066cc;
+            outline: none;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #0066cc;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            font-family: 'Arial', sans-serif;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #004999;
+        }
+
+        /* Media Queries */
+
+        /* For tablets (screen width less than 768px) */
+        @media (max-width: 768px) {
+            form {
+                max-width: 90%;
+                padding: 15px;
+            }
+        }
+
+        /* For mobile devices (screen width less than 480px) */
+        @media (max-width: 480px) {
+            form {
+                max-width: 95%;
+                margin: 20px auto;
+                padding: 10px;
+            }
+
+            form h2 {
+                font-size: 18px;
+                margin-bottom: 15px;
+            }
+
+            label {
+                font-size: 12px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="number"] {
+                padding: 8px;
+                font-size: 12px;
+            }
+
+            button[type="submit"] {
+                padding: 8px;
+                font-size: 14px;
+            }
+        }
+
+        /* For very small screens (screen width less than 320px) */
+        @media (max-width: 320px) {
+            form {
+                padding: 8px;
+            }
+
+            form h2 {
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+
+            label {
+                font-size: 11px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="number"] {
+                padding: 6px;
+                font-size: 11px;
+            }
+
+            button[type="submit"] {
+                padding: 6px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- This is the registration form content -->
+    <form method="POST" action="register.php">
+        <h2>Doctor Registration</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="specialization">Specialization:</label>
+        <input type="text" id="specialization" name="specialization" required><br><br>
+
+        <label for="experience">Years of Experience:</label>
+        <input type="number" id="experience" name="experience" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+
+</html>

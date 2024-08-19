@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedConnect</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- iconscout Fonts -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <!-- logo at the top of browser -->
+    <link rel="shortcut icon" type="x-icon" href="Images/hospital.png">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <!-- Sidebar -->
+        <ul class="sidebar" id="sidebar">
+            <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26"
+                        viewBox="0 96 960 960" width="26">
+                        <path
+                            d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
+                    </svg></a></li>
+            <li><a href="#HomeContent">Home</a></li>
+            <li><a href="#AboutUs">About Us</a></li>
+            <li><a href="#servicessection">Services</a></li>
+            <li><a href="#BookAppointments">Appointments</a></li>
+            <li><a href="#predictor">Predictor</a></li>
+            <li><a href="#Wellness">Track Wellness</a></li>
+            <li><a href="#contactus">Contact Us</a></li>
+            <li><button class="btn-register" id="registerBtn">Register</button></li>
+        </ul>
+
+        <!-- Top Navigation -->
+        <ul class="top-nav">
+            <!-- <li><span><a href="#HomeContent">MedConnect</a></span></li> -->
+            <li><span><a href="#HomeContent" style="color: var(--bluecolmain); font-size: 25px;">MedConnect</a></span>
+            </li>
+
+            <li class="hideOnMobile"><a href="#HomeContent">Home</a></li>
+            <li class="hideOnMobile"><a href="#AboutUs">About Us</a></li>
+            <li class="hideOnMobile"><a href="#servicessection">Services</a></li>
+            <li class="hideOnMobile"><a href="#BookAppointments">Appointments</a></li>
+            <li class="hideOnMobile"><a href="#predictor">Predictor</a></li>
+            <li class="hideOnMobile"><a href="#Wellness">Track Wellness</a></li>
+            <li class="hideOnMobile"><a href="#contactus">Contact Us</a></li>
+            <li class="hideOnMobile"><button class="btn-register" id="registerBtnTop">Register</button></li>
+            <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                        height="26" viewBox="0 96 960 960" width="26">
+                        <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
+                    </svg></a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Container for the iframe -->
+    <div id="iframeContainer">
+        <button id="closeIframe">X</button>
+        <iframe src="" id="registrationIframe"></iframe>
+    </div>
+
+    <main>
+        <!-- Home Page -->
+        <section class="HomeContent" id="HomeContent">
+            <div class="home-text">
+                <h6>Virtual healthcare for you</h6>
+                <h1>Welcome To <span>MedConnect !</span></h1>
+                <p>Your go-to platform for comprehensive health services, predictions, and easy appointment scheduling.
+                </p>
+                <div class="latter">
+                    <button class="homebutton">Lets Start</button>
+                </div>
+            </div>
+
+            <div class="home-img">
+                <img src="Images/HomeBg.png" alt="healthcare">
+            </div>
+        </section>
+
+        <section>
+            <div class="sponsors">
+                <h1>PROUDLY SPONSORED BY</h1>
+                <div class="sponsors-images">
+                    <img src="Images/sasoon.jpeg" alt="sasoon Logo">
+                    <img src="Images/nobel.png" alt="nobel Logo">
+                    <img src="Images/sahyadri.png" alt="sahyadri Logo">
+                    <img src="Images/jahangir.jpg" alt="jahangir Logo">
+                </div>
+            </div>
+        </section>
+
+
+        <!-- About Us Page -->
+        <section class="about-us" id="AboutUs">
+            <div class="about-container">
+                <div class="about-img">
+                    <img src="Images/AboutUs.png" alt="About Us">
+                </div>
+                <div class="about-text">
+                    <!-- <h2>About Us</h2> -->
+                    <h1 class="text-center mt-5 display-3 fw-bold">About <span class="theme-text">Us</span></h1>
+                    <p>Our platform is dedicated to connecting patients with healthcare professionals seamlessly.
+                        Doctors can register to offer their services and reach a broader audience, while patients can
+                        conveniently book appointments with these registered physicians. Additionally, our website
+                        features a disease prediction tool that helps users identify potential conditions based on their
+                        symptoms. We provide a range of essential services, including expert consultancy, a disease
+                        checker, and appointment scheduling, all aimed at enhancing the accessibility and efficiency of
+                        healthcare.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <img src="Images/testing.png" alt="Accurate Testing">
+                            <p>Accurate Testing</p>
+                        </div>
+                        <div class="feature">
+                            <img src="Images/doctor.png" alt="Qualified Doctors">
+                            <p>Qualified Doctors</p>
+                        </div>
+                        <div class="feature">
+                            <img src="Images/hospital.png" alt="Ease Connect">
+                            <p>Ease Connect</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Services Carousel -->
+        <div id="servicesCarousel" class="carousel slide">
+            <div class="carousel-inner" id="servicessection">
+                <h1 class="text-center mt-5 display-3 fw-bold">Our <span class="theme-text">Services</span></h1>
+                <!-- First Slide -->
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-12 col-md-4 d-flex justify-content-center mb-4">
+                            <div class="card shadow">
+                                <img src="images/consultancy.jpg" alt="Consultancy" class="card-img-top">
+                                <div class="card-body">
+                                    <h3 class="text-center">Consultancy</h3>
+                                    <hr class="mx-auto w-75">
+                                    <p>Connect with experienced healthcare professionals for personalized medical advice
+                                        and support.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 d-flex justify-content-center mb-4">
+                            <div class="card shadow">
+                                <img src="images/diseasecheck.jpg" alt="Disease Checker" class="card-img-top">
+                                <div class="card-body">
+                                    <h3 class="text-center">Disease Checker</h3>
+                                    <hr class="mx-auto w-75">
+                                    <p>Utilize our tool to analyze symptoms and get insights into potential health
+                                        conditions.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 d-flex justify-content-center mb-4">
+                            <div class="card shadow">
+                                <img src="images/appointment.jpg" alt="Appointments" class="card-img-top">
+                                <div class="card-body">
+                                    <h3 class="text-center">Appointments</h3>
+                                    <hr class="mx-auto w-75">
+                                    <p>Easily book appointments with qualified doctors to ensure timely medical
+                                        consultations.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Second Slide -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-12 col-md-4 d-flex justify-content-center mb-4">
+                            <div class="card shadow">
+                                <img src="images/predictr.jpg" alt="Predictor" class="card-img-top">
+                                <div class="card-body">
+                                    <h3 class="text-center">Disease Predictor</h3>
+                                    <hr class="mx-auto w-75">
+                                    <p>Input symptoms to get a preliminary assessment of possible health conditions.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 d-flex justify-content-center mb-4">
+                            <div class="card shadow">
+                                <img src="images/docregi..jpg" alt="Doctor Registration" class="card-img-top">
+                                <div class="card-body">
+                                    <h3 class="text-center">Doctor Registration</h3>
+                                    <hr class="mx-auto w-75">
+                                    <p>Doctors can register on our platform to reach a broader patient base and offer
+                                        their services.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 d-flex justify-content-center mb-4">
+                            <div class="card shadow">
+                                <img src="images/healthtips.jpg" alt="Health Tips" class="card-img-top">
+                                <div class="card-body">
+                                    <h3 class="text-center">Health Tips</h3>
+                                    <hr class="mx-auto w-75">
+                                    <p>Get valuable health tips and recommendations to maintain and improve your
+                                        well-being.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#servicesCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#servicesCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </a>
+        </div>
+
+
+        <!-- Appointments Section -->
+        <section class="appointments" id="BookAppointments">
+            <div class="container">
+                <h1 class="text-center mt-5 display-3 fw-bold">Book an <span class="theme-text">Appointment</span></h1>
+                <hr class="mx-auto mb-5 w-25">
+                <div id="responseMessage"></div>
+
+                <!-- Appointment Booking Form and Upcoming Appointments -->
+                <div class="row mb-5">
+                    <!-- Appointment Booking Form -->
+                    <div class="col-md-6">
+                        <form id="appointmentForm" action="book_appointment.php" method="POST">
+                            <div class="form-group mb-4">
+                                <label for="patientName" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="patientName" name="patientName"
+                                    placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="patientEmail" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="patientEmail" name="patientEmail"
+                                    placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="appointmentDate" class="form-label">Date</label>
+                                <input type="date" class="form-control" id="appointmentDate" name="appointmentDate"
+                                    required>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="appointmentTime" class="form-label">Time</label>
+                                <input type="time" class="form-control" id="appointmentTime" name="appointmentTime"
+                                    required>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="doctor" class="form-label">Select Doctor</label>
+                                <select class="form-control" id="doctor" name="doctor" required>
+                                    <option value="">Select Doctor</option>
+                                    <option value="Dr. Patel - Nobel Hospital">Dr. Patel - Nobel Hospital</option>
+                                    <option value="Dr. Deshmukh - Sahyadri Hospital">Dr. Deshmukh - Sahyadri Hospital
+                                    </option>
+                                    <option value="Dr. Gupta - Jahangir Hospital">Dr. Gupta - Jahangir Hospital</option>
+                                    <option value="Dr. Rao - Sasoon Hospital">Dr. Rao - Sasoon Hospital</option>
+                                    <option value="Dr. Mehta - Nobel Hospital">Dr. Mehta - Nobel Hospital</option>
+                                    <option value="Dr. Joshi - Sahyadri Hospital">Dr. Joshi - Sahyadri Hospital</option>
+                                    <option value="Dr. Sharma - Jahangir Hospital">Dr. Sharma - Jahangir Hospital
+                                    </option>
+                                    <option value="Dr. Kumar - Sasoon Hospital">Dr. Kumar - Sasoon Hospital</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="BookAppointment">Book Appointment</button>
+                            <button type="button" class="btn btn-secondary ms-3" id="resetForm">Reset Form</button>
+                        </form>
+                     </div>
+
+
+
+                    <!-- Upcoming Appointments -->
+                    <div class="col-md-6">
+                        <h2>Upcoming Appointments</h2>
+                        <table class="table table-striped" id="appointmentTable">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Doctor</th>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Appointment rows will be dynamically inserted here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <h1 class="text-center mt-5 display-3 fw-bold">Disease <span class="theme-text">Predictor</span></h1>
+
+        <section class="disease-checker" id="predictor">
+            <div class="checker-container">
+                <div class="image-container">
+                    <img src="Images/old-woman-suffering-from-headache.png" alt="Disease Checker Image">
+                </div>
+                <div class="form-container">
+                    <h1 class="text-center">Know your disease here</h1>
+                    <form id="disease-form">
+                        <label for="symptom">Enter your symptom:</label>
+                        <input type="text" id="symptom" name="symptom" required>
+                        <button type="submit" class="checkd">Check Disease</button>
+                    </form>
+                    <p id="resultDis"></p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Track Wellness Quiz Section -->
+        <section class="track-wellness" id="Wellness">
+            <!-- <h1 class="quiz-title">Track Your Wellness</h1> -->
+            <h1 class="text-center mt-5 display-3 fw-bold">Track Your <span class="theme-text">Wellness</span></h1>
+            <form id="wellness-quiz">
+                <div class="question-container">
+                    <p>1. How often do you feel overwhelmed by daily tasks?</p>
+                    <label><input type="radio" name="q1" value="1" required> Rarely</label>
+                    <label><input type="radio" name="q1" value="2"> Sometimes</label>
+                    <label><input type="radio" name="q1" value="3"> Often</label>
+                    <label><input type="radio" name="q1" value="4"> Always</label>
+                </div>
+                <div class="question-container">
+                    <p>2. How often do you feel anxious or worried?</p>
+                    <label><input type="radio" name="q2" value="1" required> Rarely</label>
+                    <label><input type="radio" name="q2" value="2"> Sometimes</label>
+                    <label><input type="radio" name="q2" value="3"> Often</label>
+                    <label><input type="radio" name="q2" value="4"> Always</label>
+                </div>
+                <div class="question-container">
+                    <p>3. How often do you experience mood swings?</p>
+                    <label><input type="radio" name="q3" value="1" required> Rarely</label>
+                    <label><input type="radio" name="q3" value="2"> Sometimes</label>
+                    <label><input type="radio" name="q3" value="3"> Often</label>
+                    <label><input type="radio" name="q3" value="4"> Always</label>
+                </div>
+                <div class="question-container">
+                    <p>4. How often do you feel a lack of motivation?</p>
+                    <label><input type="radio" name="q4" value="1" required> Rarely</label>
+                    <label><input type="radio" name="q4" value="2"> Sometimes</label>
+                    <label><input type="radio" name="q4" value="3"> Often</label>
+                    <label><input type="radio" name="q4" value="4"> Always</label>
+                </div>
+                <div class="question-container">
+                    <p>5. How often do you feel isolated or lonely?</p>
+                    <label><input type="radio" name="q5" value="1" required> Rarely</label>
+                    <label><input type="radio" name="q5" value="2"> Sometimes</label>
+                    <label><input type="radio" name="q5" value="3"> Often</label>
+                    <label><input type="radio" name="q5" value="4"> Always</label>
+                </div>
+                <button type="submit" id="submit-btn">Submit</button>
+            </form>
+            <canvas id="wellness-chart" width="400" height="400"></canvas>
+            <div id="result" class="result"></div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer" id="contactus">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h1>MedConnect</h1>
+                </div>
+                <div class="footer-links">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="#HomeContent">Home</a></li>
+                        <li><a href="#AboutUs">About Us</a></li>
+                        <li><a href="#servicessection">Services</a></li>
+                        <li><a href="#BookAppointments">Appointments</a></li>
+                        <li><a href="#predictor">Predictor</a></li>
+                        <li><a href="#Wellness">Track Wellness</a></li>
+                        <li><a href="#contactus">Contact Us</a></li>
+                    </ul>
+
+                </div>
+                <div class="footer-social">
+                    <h2>Follow Us</h2>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h2>Contact Us</h2>
+                    <p><i class="uil uil-location-point"></i> 123 Main Street, City, Country</p>
+                    <p><i class="uil uil-phone"></i> +123 456 7890</p>
+                    <p><i class="uil uil-envelope"></i>medconnect@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MedConnect. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="JS/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+
+</html>
